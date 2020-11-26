@@ -86,7 +86,7 @@ class GameQuiz extends Component {
     }
 
     getGame() {
-        const game_url = 'http://'+ window.location.host +'/game-from-id/' + this.props.game_id
+        const game_url = 'https://'+ window.location.host +'/game-from-id/' + this.props.game_id
 
         this.serverRequest = $.get(game_url, function (result) {
     
@@ -113,7 +113,7 @@ class GameQuiz extends Component {
      
         
         if (result === "stop") {
-            window.location.href = 'http://'+window.location.host+'/winner-from-hash/' + this.props.game_id
+            window.location.href = 'https://'+window.location.host+'/winner-from-hash/' + this.props.game_id
         }
      
         else if(result["text"] === "nothing") {

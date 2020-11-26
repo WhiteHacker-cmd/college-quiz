@@ -7,12 +7,12 @@ let current_user = null
 const game = $("#game_component").data("game")
 
 
-const game_sock = 'ws://' + window.location.host + "/game/" + game + "/"
+const game_sock = 'wss://' + window.location.host + "/game/" + game + "/"
 
 
 
 
-$.get('http://'+ window.location.host +'/current-user/?format=json', function(result){
+$.get('https://'+ window.location.host +'/current-user/?format=json', function(result){
     // gets the current user information from Django
     current_user = result
     render_component()
