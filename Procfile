@@ -1,1 +1,1 @@
-web: gunicorn college.wsgi --log-file -
+web: daphne college.asgi:channel_layer --port 8000 --bind 0.0.0.0
