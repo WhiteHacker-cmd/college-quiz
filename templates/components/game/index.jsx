@@ -7,7 +7,7 @@ let current_user = null
 const game = $("#game_component").data("game")
 
 
-const game_sock = 'wss://' + window.location.host + "/game/" + game + "/"
+const game_sock = 'ws://' + window.location.host + "/game/" + game + "/"
 
 
 
